@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import DisplayNames from './DisplayNames/DisplayNames';
+import AlertButton from './AlertButton/AlertButton';
 
 
 
@@ -39,11 +40,19 @@ class App extends Component {
         
         this.state = {  }
     }
+
+
+    buttonAlert(){
+        alert("devCodeCamp");
+    }
+
     render() { 
         return ( 
             <React.Fragment>
                 <DisplayNames listedNames={this.namesList} />
-            </React.Fragment>
+                <AlertButton userClick={this.buttonAlert} />
+            </React.Fragment>   
+                    
          );
     }
 }
